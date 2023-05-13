@@ -24,12 +24,12 @@ async function main() {
   //   },
   // })
   // console.log(user)
-  // const usersWithPosts = await prisma.user.findMany({
-  //   include: {
-  //     posts: true,
-  //   },
-  // })
-  // console.dir(usersWithPosts, { depth: null })
+  const usersWithPosts = await prisma.user.findMany({
+    include: {
+      posts: true,
+    },
+  })
+  console.dir(usersWithPosts, { depth: null })
 }
 
 main()
